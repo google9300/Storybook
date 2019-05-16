@@ -1,0 +1,88 @@
+{
+  "name": "mkit-bundle-storybook",
+  "version": "1.0.1",
+  "description": "Micro Storybook project bundle",
+  "keywords": [
+    "mkit",
+    "bundle",
+    "micro",
+    "Storybook",
+    "React",
+    "project",
+    "boilerplate",
+    "template",
+    "starter"
+  ],
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "storybook:build": "build-storybook -c .storybook -o .out",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "prebuild": "rm -rf ./dist ./.out ./coverage",
+    "build": "NODE_ENV=production `npm bin`/babel ./src --out-dir ./dist",
+    "release": "npm test && npm run build && release-it"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix .storybook/**/*.js stories/**/*.js src/**/*.js tests/**/*.js",
+      "git add"
+    ],
+    "*.{js,json,md}": [
+      "prettier --write .storybook/**/*.{js,json,md} .stories/**/*.{js,json,md} src/**/*.{js,json,md} tests/**/*.{js,json,md}",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^5.0.11",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-console": "^1.1.0",
+    "@storybook/addon-knobs": "^5.0.11",
+    "@storybook/addon-notes": "^5.0.11",
+    "@storybook/addon-viewport": "^5.0.11",
+    "@storybook/react": "^5.0.11",
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-storybook-addon-props-combinations": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-storyshots": "^5.0.11",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.3",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.12.4",
+    "husky": "^2.2.0",
+    "jest": "^24.0.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.16.0",
+    "react-test-renderer": "^16.7.0",
+    "release-it": "^12.0.1"
+  },
+  "author": "MK IT Ltd. <hi@mkit.io>",
+  "homepage": "https://github.com/mkitio/mkit-bundle-storybook#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkitio/mkit-bundle-storybook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mkitio/mkit-bundle-storybook/issues"
+  },
+  "license": "MIT"
+}

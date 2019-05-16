@@ -1,0 +1,20 @@
+# Dependency directories
+node_modules
+yarn-error.log
+
+# Build
+dist
+
+# Storybook static output
+.out
+
+# Coverage
+coverage
+
+# Editors
+.idea
+.vscode
+
+# Misc
+.DS_Store
+TODO.md

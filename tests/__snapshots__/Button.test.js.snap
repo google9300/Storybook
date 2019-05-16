@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Basic 1`] = `
+<button
+  type="button"
+>
+  Basic
+</button>
+`;
+
+exports[`Storyshots Button with Actions 1`] = `
+<button
+  onClick={[Function]}
+  type="button"
+>
+  Actions
+</button>
+`;
+
+exports[`Storyshots Button with Console 1`] = `
+<button
+  onClick={[Function]}
+  type="button"
+>
+  Console
+</button>
+`;
+
+exports[`Storyshots Button with Knobs 1`] = `
+<button
+  disabled={false}
+  type="button"
+>
+  Knobs
+</button>
+`;
+
+exports[`Storyshots Button with Notes 1`] = `
+<button
+  type="button"
+>
+  Notes
+</button>
+`;
+
+exports[`Storyshots Button with Props Combinations 1`] = `
+<div>
+  <div
+    style={Object {}}
+  >
+    <button
+      disabled={false}
+      onClick={[Function]}
+    >
+      hello world
+    </button>
+    <pre
+      className="source"
+    >
+      &lt;button
+  disabled={false}
+  onClick={[Function action]}
+&gt;
+  hello world
+&lt;/button&gt;
+    </pre>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <button
+      disabled={false}
+      onClick={[Function]}
+    >
+      <b>
+        some elements
+      </b>
+    </button>
+    <pre
+      className="source"
+    >
+      &lt;button
+  disabled={false}
+  onClick={[Function action]}
+&gt;
+  &lt;b&gt;
+    some elements
+  &lt;/b&gt;
+&lt;/button&gt;
+    </pre>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      hello world
+    </button>
+    <pre
+      className="source"
+    >
+      &lt;button
+  disabled={true}
+  onClick={[Function action]}
+&gt;
+  hello world
+&lt;/button&gt;
+    </pre>
+  </div>
+  <div
+    style={Object {}}
+  >
+    <button
+      disabled={true}
+      onClick={[Function]}
+    >
+      <b>
+        some elements
+      </b>
+    </button>
+    <pre
+      className="source"
+    >
+      &lt;button
+  disabled={true}
+  onClick={[Function action]}
+&gt;
+  &lt;b&gt;
+    some elements
+  &lt;/b&gt;
+&lt;/button&gt;
+    </pre>
+  </div>
+</div>
+`;

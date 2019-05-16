@@ -1,0 +1,15 @@
+.page {
+  min-height: 100vh;
+  min-width: 100vw;
+  /* Overflow for testing purpose */
+  overflow: hidden;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 100px 1fr 1fr 100px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    'header header header header'
+    '. container container .'
+    '. container container .'
+    'footer footer footer footer';
+}
