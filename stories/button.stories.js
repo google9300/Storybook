@@ -6,10 +6,13 @@ import withPropsCombinations from 'react-storybook-addon-props-combinations'; //
 import Button from '../src/components/Button/Button';
 import Page from '../src/components/Page/page';
 import Container from '../src/components/Container/Container';
+import Grid from '../src/components/Grid/Grid';
+import Item from '../src/components/Grid/shared/Griditem';
 
 const stories = storiesOf('Button', module);
-const pageStory = storiesOf('Page with CSS GRID', module);
+const pageStory = storiesOf('Page Layout', module);
 const containerStory = storiesOf('Container', module);
+const gridStory = storiesOf('Grid', 'Item', module);
 
 containerStory.add('Size 100 with knobs', () => (
   <Container
@@ -20,6 +23,12 @@ containerStory.add('Size 100 with knobs', () => (
   >
     Container with knobs
   </Container>
+));
+
+gridStory.add('Basic', () => (
+  <Grid>
+    <Item item={number('Size with values = (1,2,3,4,5,6,7,8,9,10)', 5)}>Container1</Item>
+  </Grid>
 ));
 
 pageStory
